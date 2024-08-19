@@ -1,33 +1,29 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { assets } from "../assets/assets";
 
 const Home = () => {
   return (
     <>
-      <div id="home" className="homepage bg-[#161716]">
-        <Navbar />
-        <div className="flex">
-          <div className="left w-[45%] h-screen flex items-center justify-center pt-6">
-            <img class="bgLanding h-[80vh] rounded-md" src={assets.home_bg} />
-          </div>
-          <div className="center w-[5px] flex justify-center ">
-            <div className="div bg-[#49624C] w-[2px] h-[70%]"></div>
-          </div>
-          <div className="right w-[54%] h-screen flex items-center justify-center">
-            <div className="intro_box w-[70%]">
-              <div className="heading">
-                <h1 className=" text-xl font-[rocky]"><span className="text-3xl">👋</span>Hi, I'm Adarsh</h1>
-              </div>
-              <p className="text-5xl leading-[3.8rem] mt-3">
-                "A{" "}
-                <span className="span_text font-extrabold text-[#D6C09C]">
-                  web developer
-                </span>{" "}
-                who loves turning ideas into interactive, stylish, and
-                user-friendly websites."
-              </p>
+      <div className="homepage w-full h-screen bg-[#161716]">
+        <div className="home_content relative w-full h-screen text-center flex items-center justify-center px-6">
+          <div className="ball1 balls absolute h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
+          <div className="ball2 balls absolute h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
+
+          <div className="intro_box md:w-[46%] absolute">
+            <div className="heading">
+              <h1 className=" text-lg mr-4 md:mr-auto md:text-xl font-[rocky]">
+                <span className="text-4xl md:text-4xl">👋</span>Hi, I'm Adarsh
+              </h1>
             </div>
+
+            <p className="text-2xl md:text-[2.3rem] leading-none mt-3 md:mt-5 md:text-center ">
+              "A{" "}
+              <span className="span_text font-extrabold text-[#D6C09C]">
+                web developer
+              </span>{" "}
+              who loves turning ideas into interactive, stylish, and
+              user-friendly websites."
+            </p>
           </div>
         </div>
       </div>

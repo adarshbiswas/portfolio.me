@@ -10,6 +10,7 @@ const Contact = () => {
   return (
     <>
       <div id="contact" className="contact bg-[#161716] w-full h-screen flex">
+      
         <div className="contact_left h-screen w-[50%] pt-52 pl-16">
           <h1 className="text-3xl">Contact me!</h1>
           <div className="contact_left_content mt-8">

@@ -5,7 +5,7 @@ const ProjectItems = (props) => {
   return (
     <>
       <div className="item p-4">
-        <img className="project_image rounded-xl " src={props.img} />
+        <img className="project_image rounded-xl h-[250px] w-[350px] object-cover" src={props.img} />
         <div className="header mt-3 flex justify-between items-center pr-2">
           <h2 className="font-semibold text-gray-100/75">{props.date}</h2>
           <h2 className="view_project flex items-center gap-1">
