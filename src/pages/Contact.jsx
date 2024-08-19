@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { SlSocialGithub } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";

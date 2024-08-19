@@ -1,9 +1,6 @@
 import React from "react";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
-
-
-// import Navbar from "../components/Navbar";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { TbBrandCss3 } from "react-icons/tb";
 import { RiJavascriptFill } from "react-icons/ri";

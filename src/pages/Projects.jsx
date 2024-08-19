@@ -1,5 +1,4 @@
 import React from "react";
-// import Navbar from "../components/Navbar";
 import { assets } from "../assets/assets.js";
 import ProjectItems from "../components/ProjectItems.jsx";
 import { FaArrowRightLong } from "react-icons/fa6";
