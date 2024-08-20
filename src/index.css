@@ -45,15 +45,23 @@ body {
   bottom: -3px;
   left: 0;
   height: 2px;
-  width: 100%;
+  width: 60%;
   transition: all ease 0.4s;
-  background-color: #ffffffba;
+  background-color: #D6C09C;
 }
 
 .navbar .nav_items .nav_items_menu li:hover::after {
   transform: translateY(-3px);
   opacity: 1;
   scale: 1;
+}
+
+.active{
+  color: #D6C09C;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
 }
 
 /* Homepage */

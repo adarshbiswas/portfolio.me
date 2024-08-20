@@ -9,10 +9,10 @@ const Home = () => {
           <div className="ball1 balls absolute h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
           <div className="ball2 balls absolute h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
 
-          <div className="intro_box md:w-[46%] absolute">
+          <div className="intro_box md:w-[44%] absolute px-2">
             <div className="heading">
               <h1 className=" text-lg mr-4 md:mr-auto md:text-xl font-[rocky]">
-                <span className="text-4xl md:text-4xl">👋</span>Hi, I'm Adarsh
+                <span className="text-4xl md:text-3xl">👋</span>Hi, I'm Adarsh
               </h1>
             </div>
 

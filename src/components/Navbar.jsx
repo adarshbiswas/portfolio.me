@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets.js";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
 
@@ -17,22 +17,22 @@ const Navbar = () => {
         <h1 className=" text-sm font-[rocky] ">Portfolio</h1>
 
         <div className="nav_items hidden md:flex items-center gap-12 mr-10">
-          <ul className="nav_items_menu flex gap-6 text-lg font-bold">
-            <Link to="/">
+          <ul className="nav_items_menu flex gap-6 text-lg font-light text-white/80">
+            <NavLink activeClassName="active" to="/">
               <li>Home</li>
-            </Link>
-            <Link to="/about">
+            </NavLink>
+            <NavLink activeClassName="active" to="/about">
               <li>About</li>
-            </Link>
-            <Link to="/projects">
+            </NavLink>
+            <NavLink activeClassName="active" to="/projects">
               <li>Projects</li>
-            </Link>
-            <Link to="/contact">
+            </NavLink>
+            <NavLink activeClassName="active" to="/contact">
               <li>Contact</li>
-            </Link>
-            <Link to="blog">
+            </NavLink>
+            <NavLink activeClassName="active" to="blog">
               <li>Blog</li>
-            </Link>
+            </NavLink>
           </ul>
           <img
             className="h-9 cursor-pointer hover:scale-105 "
@@ -56,22 +56,22 @@ const Navbar = () => {
         <div className="sidebar_items flex flex-col gap-6">
           {/* <h1 className=" text-sm font-[rocky] ">Portfolio</h1> */}
 
-          <ul className="nav_items_menu flex flex-col gap-6 text-3xl font-bold  mt-6">
-            <Link to="/">
+          <ul className="nav_items_menu flex flex-col gap-6 text-3xl font-light text-white/80  mt-6">
+            <NavLink activeClassName="active" to="/">
               <li>Home</li>
-            </Link>
-            <Link to="/about">
+            </NavLink>
+            <NavLink activeClassName="active" to="/about">
               <li>About</li>
-            </Link>
-            <Link to="/projects">
+            </NavLink>
+            <NavLink activeClassName="active" to="/projects">
               <li>Projects</li>
-            </Link>
-            <Link to="/contact">
+            </NavLink>
+            <NavLink activeClassName="active" to="/contact">
               <li>Contact</li>
-            </Link>
-            <Link to="blog">
+            </NavLink>
+            <NavLink activeClassName="active" to="blog">
               <li>Blog</li>
-            </Link>
+            </NavLink>
           </ul>
           <div className="theme ">
             <img
