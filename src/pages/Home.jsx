@@ -3,10 +3,10 @@ import { assets } from "../assets/assets";
 
 const Home = () => {
   return (
-    <section id="home" className="homepage w-full h-full bg-[#161716]">
+    <section id="home" className="homepage  w-full h-full bg-[#161716]">
       <div className="home_content relative w-full h-full text-center flex items-center justify-center">
-        <div className="ball1 balls absolute h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
-        <div className="ball2 balls absolute  h-[38vw] w-[38vw] md:h-[26vw] md:w-[26vw] rounded-full bg-[#49614C]"></div>
+        <div className="ball1 balls absolute h-[38vw] w-[38vw] md:h-[30vw] md:w-[30vw] rounded-full bg-[#49614C]"></div>
+        <div className="ball2 balls absolute  h-[38vw] w-[38vw] md:h-[30vw] md:w-[30vw] rounded-full bg-[#49614C]"></div>
 
         <div className="intro_box md:w-[44%] px-2">
           <div className="heading">
@@ -15,10 +15,10 @@ const Home = () => {
             </h1>
           </div>
 
-          <p className="text-2xl relative md:text-[2.3rem] leading-none mt-3 md:mt-5 md:text-center ">
+          <p className="text-2xl relative font-['Gilroy'] md:text-[2.3rem] leading-none mt-3 md:mt-5 md:text-center ">
             "A{" "}
-            <span className="span_text font-extrabold text-[#D6C09C]">
-              web developer
+            <span className="span_text font-extrabold font-['Gilroy'] text-[#D6C09C]">
+              Web Developer
             </span>{" "}
             who loves turning ideas into interactive, stylish, and user-friendly
             websites."

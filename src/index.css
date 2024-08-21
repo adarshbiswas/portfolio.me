@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Gilroy;
+  font-family: Poppins;
   scroll-behavior: smooth;
 }
 
@@ -47,7 +47,7 @@ body {
   height: 2px;
   width: 60%;
   transition: all ease 0.4s;
-  background-color: #d6c09c;
+  background-color: #f8f398;
 }
 
 .navbar .nav_items .nav_items_menu li:hover::after {
@@ -56,8 +56,16 @@ body {
   scale: 1;
 }
 
+.navbar .nav_items .nav_items_menu a {
+  transition: all ease 0.2s;
+}
+
+.navbar .nav_items .nav_items_menu a:hover {
+  rotate: 4deg;
+}
+
 .active {
-  color: #d6c09c;
+  color: #f8f398;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -75,10 +83,10 @@ body {
   filter: blur(60px);
 }
 .home_content .ball2 {
-  animation: anime ease-in-out 6s infinite alternate;
+  animation: anime ease-in-out 2s infinite alternate;
 }
 .home_content .ball1 {
-  animation: anime2 ease-in-out 6s infinite alternate;
+  animation: anime2 ease-in-out 2s infinite alternate;
 }
 
 @keyframes anime {
@@ -100,64 +108,39 @@ body {
 }
 
 /* About */
-
-.about_content_right {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+.image_container_box .project_image {
+  transition: all 0.25s;
 }
 
-.about_content_right .item {
-  border: 1px solid #7e746376;
-  border-radius: 8px;
-  padding: 10px 16px;
-}
-
-.lower_content .tech_stack .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.item .header .view_project .arrow_icon {
-  transition: all 0.3s;
-}
-
-.item .header .view_project:hover .arrow_icon {
-  transform: translateX(10px);
-}
-
-.item .header .view_project:hover {
-  color: #ae8fdb;
-  cursor: pointer;
-}
-
-.item img {
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.item img:hover {
-  padding: 2px;
-  background-color: rgba(232, 232, 232, 0.703);
+.image_container_box:hover .project_image {
+  rotate: 3deg;
 }
 
 /* Projects */
 
 .projects .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   margin-top: 30px;
   gap: 30px;
+}
+
+.view_project .project_arrow {
+  transition: all 0.3s;
+}
+
+.view_project:hover .project_arrow {
+  transform: translateX(10px);
+}
+
+.view_project:hover {
+  cursor: pointer;
+  color: #f8f398;
 }
 
 @media (max-width: 550px) {
   .navbar .nav_items {
     display: none;
-  }
-
-  .projects {
-    padding: 100px 6px 2px 6px;
   }
 
   .projects .container {
