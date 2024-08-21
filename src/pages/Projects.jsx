@@ -5,7 +5,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Projects = () => {
   return (
-    <div className="projects w-full h-full md:h-screen py-24 px-20 bg-[#161716]">
+    <div
+      id="projects"
+      className="projects bg-[#161716] w-full min-h-screen p-20 "
+    >
       <h1 className="text-4xl underline decoration-dashed underline-offset-8 flex items-center gap-3 px-4">
         Projects I built <FaArrowRightLong />
       </h1>

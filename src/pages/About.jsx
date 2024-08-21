@@ -16,15 +16,13 @@ import { SiMongodb } from "react-icons/si";
 
 const About = () => {
   return (
-    <>
-      <div className="about bg-[#161716] py-16 px-20 h-screen w-full  ">
-        <div className="upper_content w-full flex flex-col ">
-          {/* <div className="about_title w-full text-right"><h1 className="text-4xl underline decoration-dashed underline-offset-8 flex items-center gap-3">
+    <div id="about" className="about p-14 h-screen w-full bg-[#161716]">
+      {/* <div className="upper_content w-full flex flex-col ">
+        <div className="about_title w-full text-right"><h1 className="text-4xl underline decoration-dashed underline-offset-8 flex items-center gap-3">
             About me <FaArrowRightLong />
-          </h1></div> */}
-        </div>
-      </div>
-    </>
+          </h1></div>
+      </div> */}
+    </div>
   );
 };
 

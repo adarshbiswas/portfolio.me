@@ -1,11 +1,7 @@
 import React from "react";
 
 const Blog = () => {
-  return (
-    <>
-      <div className="relative">Blog</div>
-    </>
-  );
+  return <div className="">Blog</div>;
 };
 
 export default Blog;

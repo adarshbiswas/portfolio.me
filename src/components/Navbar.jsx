@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets.js";
-import { NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
+
+// import { SlSocialGithub } from "react-icons/sl";
+// import { SlSocialInstagram } from "react-icons/sl";
+// import { SlSocialLinkedin } from "react-icons/sl";
+// import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -13,26 +17,26 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar fixed z-50 top-0 left-0 bg-[#161716] flex justify-between items-center w-full px-6 py-6">
+      <div className="navbar fixed z-20 top-0 left-0 backdrop-blur-sm flex justify-between items-center w-full px-6 py-6">
         <h1 className=" text-sm font-[rocky] ">Portfolio</h1>
 
         <div className="nav_items hidden md:flex items-center gap-12 mr-10">
           <ul className="nav_items_menu flex gap-6 text-lg font-light text-white/80">
-            <NavLink activeClassName="active" to="/">
+            <a href="#home">
               <li>Home</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/about">
+            </a>
+            <a href="#about">
               <li>About</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/projects">
+            </a>
+            <a href="#projects">
               <li>Projects</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/contact">
+            </a>
+            <a href="#contact">
               <li>Contact</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="blog">
-              <li>Blog</li>
-            </NavLink>
+            </a>
+            <a href="#blog">
+              <li>Blogs</li>
+            </a>
           </ul>
           <img
             className="h-9 cursor-pointer hover:scale-105 "
@@ -57,21 +61,21 @@ const Navbar = () => {
           {/* <h1 className=" text-sm font-[rocky] ">Portfolio</h1> */}
 
           <ul className="nav_items_menu flex flex-col gap-6 text-3xl font-light text-white/80  mt-6">
-            <NavLink activeClassName="active" to="/">
+            <a href="#home">
               <li>Home</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/about">
+            </a>
+            <a href="#about">
               <li>About</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/projects">
+            </a>
+            <a href="#projects">
               <li>Projects</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="/contact">
+            </a>
+            <a href="#contact">
               <li>Contact</li>
-            </NavLink>
-            <NavLink activeClassName="active" to="blog">
-              <li>Blog</li>
-            </NavLink>
+            </a>
+            <a href="#blog">
+              <li>Blogs</li>
+            </a>
           </ul>
           <div className="theme ">
             <img

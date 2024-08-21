@@ -10,12 +10,6 @@
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 *::selection {
   background: #4b644c;
 }
@@ -28,6 +22,12 @@ body {
 @font-face {
   font-family: rocky;
   src: url(./fonts/rockybilly.regular.ttf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 /* Navbar  */
@@ -47,7 +47,7 @@ body {
   height: 2px;
   width: 60%;
   transition: all ease 0.4s;
-  background-color: #D6C09C;
+  background-color: #d6c09c;
 }
 
 .navbar .nav_items .nav_items_menu li:hover::after {
@@ -56,15 +56,50 @@ body {
   scale: 1;
 }
 
-.active{
-  color: #D6C09C;
+.active {
+  color: #d6c09c;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 3px;
 }
 
+.side_links {
+  text-decoration: none;
+  rotate: 90deg;
+}
+
 /* Homepage */
+
+.home_content .balls {
+  filter: blur(60px);
+}
+.home_content .ball2 {
+  animation: anime ease-in-out 6s infinite alternate;
+}
+.home_content .ball1 {
+  animation: anime2 ease-in-out 6s infinite alternate;
+}
+
+@keyframes anime {
+  from {
+    transform: translateY(-10%, -10%);
+  }
+  to {
+    transform: translateY(10%, 10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-5%, 10%);
+  }
+}
+
+/* About */
 
 .about_content_right {
   display: grid;
@@ -107,6 +142,8 @@ body {
   background-color: rgba(232, 232, 232, 0.703);
 }
 
+/* Projects */
+
 .projects .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -126,33 +163,5 @@ body {
   .projects .container {
     display: flex;
     flex-direction: column;
-  }
-}
-
-.home_content .balls {
-  filter: blur(60px);
-}
-.home_content .ball2 {
-  animation: anime ease-in-out 6s infinite alternate;
-}
-.home_content .ball1 {
-  animation: anime2 ease-in-out 6s infinite alternate;
-}
-
-@keyframes anime {
-  from {
-    transform: translateY(-10%, -10%);
-  }
-  to {
-    transform: translateY(10%, 10%);
-  }
-}
-
-@keyframes anime2 {
-  from {
-    transform: translate(5%, -5%);
-  }
-  to {
-    transform: translate(-5%, 10%);
   }
 }
