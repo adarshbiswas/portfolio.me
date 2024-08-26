@@ -33,7 +33,7 @@ const ProjectItems = (props) => {
             </h2>
           </div>
           <div className=" flex flex-col gap-5 mt-4">
-            <div className="tech_used w-full break-words flex gap-2 font-medium text-white ">
+            {/* <div className="tech_used w-full break-words flex gap-2 font-medium text-white ">
               {props.tech?.map((item, index) => {
                 return (
                   <span key={index} className="">
@@ -41,7 +41,7 @@ const ProjectItems = (props) => {
                   </span>
                 );
               })}
-            </div>
+            </div> */}
 
             <p className="text-white/60 font-extralight">
               {props.desc} {/*  */}

@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div className="app h-screen w-full bg-[#161716]  text-white font-[poppins]">
+    <div className="app h-screen w-full bg-[#161716] text-white font-[poppins]">
       {/* <Sidebar /> */}
 
       <Navbar />

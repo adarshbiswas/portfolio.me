@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { assets } from "../assets/assets.js";
 import { IoClose } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-// import { SlSocialGithub } from "react-icons/sl";
-// import { SlSocialInstagram } from "react-icons/sl";
-// import { SlSocialLinkedin } from "react-icons/sl";
-// import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
+
+  useGSAP(() => {
+    gsap.from(".navbar",{
+      y:-100,
+      opacity:0,
+      delay:0.5,
+
+    })
+  })
+
   const [nav, setNav] = useState(true);
 
   const handleNav = () => {
@@ -53,7 +61,7 @@ const Navbar = () => {
       <div
         className={
           !nav
-            ? "mobile_sidebar fixed z-50 md:hidden top-0 left-0 w-[60%] h-screen backdrop-blur-md px-6 py-8  border-r border-r-gray-300 ease-in-out duration-300"
+            ? "mobile_sidebar fixed z-50 md:hidden top-0 left-0 w-[60%] h-screen backdrop-blur-md px-6 py-8 border-r border-r-gray-300 ease-in-out duration-300"
             : "mobile_sidebar fixed z-50 md:hidden top-0 left-[-100%] w-[60%] h-screen backdrop-blur-md px-6 py-8  border-r border-r-gray-300 ease-in-out duration-300"
         }
       >

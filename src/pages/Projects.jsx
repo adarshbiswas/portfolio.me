@@ -1,7 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets.js";
 import ProjectItems from "../components/ProjectItems.jsx";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 const Projects = () => {
   return (
