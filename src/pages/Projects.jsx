@@ -1,14 +1,74 @@
-import React from "react";
+import React, { useRef } from "react";
 import { assets } from "../assets/assets.js";
 import ProjectItems from "../components/ProjectItems.jsx";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+// * Ref variables
 
 const Projects = () => {
+  // * Gsap animation
+  useGSAP(() => {
+    // * Split text variables
+    const titleText = new SplitType("#project_title");
+
+    gsap.from(titleText.chars, {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.02,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: titleText.chars,
+        scroller: "body",
+        // markers: true,
+        start: "top 90%",
+      },
+    });
+
+    gsap.from(".header_line", {
+      opacity: 0,
+      y: 100,
+      duration: 0.5,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: titleText.chars,
+        scroller: "body",
+        // markers: true,
+        start: "top 90%",
+      },
+    });7
+
+    gsap.from(".container", {
+      y: 150,
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: ".container",
+        scroller: "body",
+        // markers: true,
+        start: "top 90%",
+      },
+    });
+  });
+
   return (
     <div id="projects" className="projects lg:px-24 w-full bg-[#161716]">
       <div className="projects_container w-full h-full px-6 pt-24 lg:px-20  ">
-        <div className="header flex items-center gap-4">
+        <div className="header w-full flex items-center gap-4">
           <div className="header_line h-[1px] bg-[#e8e8e8b7] w-full"></div>
-          <h1 className="text-4xl font-black md:text-5xl">.Projects</h1>
+
+          <h1
+            id="project_title"
+            className=" text-4xl w-[300px] font-black md:text-5xl overflow-hidden"
+          >
+            .Projects
+          </h1>
         </div>
         <div className="container w-full">
           <ProjectItems
@@ -30,7 +90,7 @@ const Projects = () => {
             }
           />
           <ProjectItems
-            img={assets.bg2}
+            img={assets.donow_bg}
             date={"02 May 2023"}
             name={"DoNow"}
             tech={["NextJS,", "ReactJS,", "Tailwind,", "NodeJS,", "Supabase"]}

@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: poppins;
-  scroll-behavior: smooth;
 }
 
 *::selection {
@@ -83,6 +82,23 @@ body {
 }
 
 /* Homepage */
+
+.title_elem .char {
+  font-family: "rocky";
+}
+
+.title_elem .line {
+  padding-top: 18px;
+  overflow: hidden;
+}
+
+.para_elem .char {
+  font-family: "Gilroy";
+}
+
+.para_elem .line {
+  overflow: hidden;
+}
 
 .home_content .balls {
   filter: blur(60px);

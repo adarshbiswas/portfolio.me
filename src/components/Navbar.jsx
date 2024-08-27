@@ -4,18 +4,16 @@ import { IoClose } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
+import { Link } from "react-scroll";
 
 const Navbar = () => {
-
   useGSAP(() => {
-    gsap.from(".navbar",{
-      y:-100,
-      opacity:0,
-      delay:0.5,
-
-    })
-  })
+    gsap.from(".navbar", {
+      y: -100,
+      opacity: 0,
+      duration:1,
+    });
+  });
 
   const [nav, setNav] = useState(true);
 
@@ -30,21 +28,21 @@ const Navbar = () => {
 
         <div className="nav_items hidden md:flex items-center gap-12 mr-10">
           <ul className="nav_items_menu flex gap-6 text-lg font-light text-white/80">
-            <a href="#home">
-              <li>Home</li>
-            </a>
-            <a href="#about">
-              <li>About</li>
-            </a>
-            <a href="#projects">
-              <li>Projects</li>
-            </a>
-            <a href="#contact">
-              <li>Contact</li>
-            </a>
-            <a href="#blog">
-              <li>Blogs</li>
-            </a>
+            <Link className="cursor-pointer" to="home" spy={true} smooth={true} duration={500}>
+              <li>home</li>
+            </Link>
+            <Link className="cursor-pointer" to="about" spy={true} smooth={true} duration={500}>
+              <li>about</li>
+            </Link>
+            <Link className="cursor-pointer" to="projects" spy={true} smooth={true} duration={500}>
+              <li>projects</li>
+            </Link>
+            <Link className="cursor-pointer" to="contact" spy={true} smooth={true} duration={500}>
+              <li>contact</li>
+            </Link>
+            <Link className="cursor-pointer" to="blog" spy={true} smooth={true} duration={500}>
+              <li>blogs</li>
+            </Link>
           </ul>
           <img
             className="h-9 cursor-pointer hover:scale-105 "
@@ -69,21 +67,21 @@ const Navbar = () => {
           {/* <h1 className=" text-sm font-[rocky] ">Portfolio</h1> */}
 
           <ul className="nav_items_menu flex flex-col gap-6 text-3xl font-light text-white/80 mt-6">
-            <a href="#home">
+            <Link to="home" spy={true} smooth={true} duration={500}>
               <li>Home</li>
-            </a>
-            <a href="#about">
+            </Link>
+            <Link to="about" spy={true} smooth={true} duration={500}>
               <li>About</li>
-            </a>
-            <a href="#projects">
+            </Link>
+            <Link to="projects" spy={true} smooth={true} duration={500}>
               <li>Projects</li>
-            </a>
-            <a href="#contact">
+            </Link>
+            <Link to="contact" spy={true} smooth={true} duration={500}>
               <li>Contact</li>
-            </a>
-            <a href="#blog">
+            </Link>
+            <Link to="blog" spy={true} smooth={true} duration={500}>
               <li>Blogs</li>
-            </a>
+            </Link>
           </ul>
           <div className="theme ">
             <img
