@@ -41,7 +41,8 @@ const Projects = () => {
         // markers: true,
         start: "top 90%",
       },
-    });7
+    });
+    7;
 
     gsap.from(".container", {
       y: 150,
@@ -65,7 +66,7 @@ const Projects = () => {
 
           <h1
             id="project_title"
-            className=" text-4xl w-[300px] font-black md:text-5xl overflow-hidden"
+            className=" text-4xl w-[350px] font-black md:text-5xl overflow-hidden py-2"
           >
             .Projects
           </h1>
@@ -79,6 +80,8 @@ const Projects = () => {
             desc={
               "A modern Anime library consisting of all the movies and TV shows, Used JikanAPI to fetch all the data using React js."
             }
+            live={"https://animacho.vercel.app/"}
+            github={"https://github.com/adarshbiswas/Animacho"}
           />
           <ProjectItems
             img={assets.feastfleet_bg}
@@ -88,6 +91,8 @@ const Projects = () => {
             desc={
               "A fully functional Food delivering website to order delicious meals. From surfing over the food menu to placing order via secure stripe payment."
             }
+            live={"https://feastfleet.netlify.app/"}
+            github={""}
           />
           <ProjectItems
             img={assets.donow_bg}
@@ -97,6 +102,8 @@ const Projects = () => {
             desc={
               "A Task manager application to keep a track of all your TODO work. Keeps track of all your daily course work in it's efficient databse built using supabase."
             }
+            live={""}
+            github={""}
           />
           <ProjectItems
             img={assets.tuneit_bg}
@@ -106,6 +113,8 @@ const Projects = () => {
             desc={
               "A modern music application built using Spotify's open source API. Built using NextJS for more flexible and efficiency, consist of database management for uploading our local music files."
             }
+            live={""}
+            github={""}
           />
         </div>
       </div>

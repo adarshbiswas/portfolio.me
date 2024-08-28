@@ -146,7 +146,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="about_links flex items-center gap-4 pt-4 w-fit overflow-hidden">
+            <div className="about_links flex items-center gap-4 pt-4 px-2 w-fit overflow-hidden">
               <h3
                 id="link_elems"
                 className="flex items-center gap-2 text-lg text-nowrap "
@@ -157,13 +157,19 @@ const About = () => {
                 id="link_elems"
                 className="link_links flex items-center gap-4"
               >
-                <button className="px-6 py-2 bg-[#526B56] border-none outline-none rounded-lg hover:scale-105 duration-150 hover:bg-[#5f9361]">
-                  Resume
-                </button>
+                <a
+                  href="../assets/just for fun.pdf"
+                  target="_blank"
+                  className="cursor-pointer"
+                >
+                  <button className="px-6 py-2 bg-[#526B56] border-none outline-none rounded-lg hover:scale-105 duration-150 hover:bg-[#5f9361]">
+                    Resume
+                  </button>
+                </a>
                 <a
                   id="link_elems"
                   href="https://github.com/adarshbiswas"
-                  target="blank"
+                  target="_blank"
                 >
                   <div className="bg-[#E0CDAE] p-2 rounded-full hover:scale-110 duration-150">
                     <SlSocialGithub

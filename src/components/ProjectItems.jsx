@@ -23,14 +23,20 @@ const ProjectItems = (props) => {
 
             <div className="underline_elem h-[0.5px] bg-[#e8e8e8b7] w-full"></div>
 
-            <h2 className="view_github flex items-center gap-1 hover:scale-110 duration-300 cursor-pointer">
+            <a
+              href={props.github}
+              target="_blank"
+              className="view_github flex items-center gap-1 hover:scale-110 duration-300 cursor-pointer"
+            >
               <FaGithubSquare size={28} className=" opacity-75" />
-            </h2>
+            </a>
 
-            <h2 className="view_project flex items-center gap-1 text-nowrap">
-              {/* <LuArrowUpRightFromCircle size={26} className="rotate-45" /> */}
-              Live <FaArrowRightLong className="project_arrow" />
-            </h2>
+            <a className="cursor-pointer" href={props.live} target="_blank">
+              <h2 className="view_project flex items-center gap-1 text-nowrap cursor-pointer">
+                {/* <LuArrowUpRightFromCircle size={26} className="rotate-45" /> */}
+                Live <FaArrowRightLong className="project_arrow" />
+              </h2>
+            </a>
           </div>
           <div className=" flex flex-col gap-5 mt-4">
             {/* <div className="tech_used w-full break-words flex gap-2 font-medium text-white ">
