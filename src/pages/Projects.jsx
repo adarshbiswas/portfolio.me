@@ -60,13 +60,13 @@ const Projects = () => {
 
   return (
     <div id="projects" className="projects lg:px-24 w-full bg-[#161716]">
-      <div className="projects_container w-full h-full px-6 pt-24 lg:px-20  ">
-        <div className="header w-full flex items-center gap-4">
+      <div className="projects_container w-full h-full pt-14 md:pt-24 lg:px-20  ">
+        <div className="header w-full flex items-center gap-4 px-4">
           <div className="header_line h-[1px] bg-[#e8e8e8b7] w-full"></div>
 
           <h1
             id="project_title"
-            className=" text-4xl w-[350px] font-black md:text-5xl overflow-hidden py-2"
+            className=" text-4xl w-[350px] text-center font-black md:text-5xl overflow-hidden py-2"
           >
             .Projects
           </h1>

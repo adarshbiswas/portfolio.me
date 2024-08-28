@@ -62,9 +62,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="contact px-4 lg:px-24 w-full min-h-full bg-[#161716]"
+      className="contact px-2 lg:px-24 w-full min-h-full bg-[#161716]"
     >
-      <div className="contact_container w-full h-full px-6 pt-20 lg:pt-24 lg:px-20 flex flex-col items-center gap-4 bg-inherit">
+      <div className="contact_container w-full h-full px-2 pt-20 lg:pt-24 lg:px-20 flex flex-col items-center gap-4 bg-inherit">
         <div className="header_content w-full text-center flex flex-col gap-1 items-center justify-center">
           <h1 className="text-6xl font-black pt-2 overflow-hidden">
             <span id="contact_item" className="contact_title">

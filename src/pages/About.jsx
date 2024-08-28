@@ -98,15 +98,12 @@ const About = () => {
   });
 
   return (
-    <div
-      id="about"
-      className="about px-4 lg:px-24 lg:h-screen w-full bg-[#161716]"
-    >
-      <div className="about_container w-full h-full px-6 py-24 lg:px-20 ">
-        <div className="header flex items-center gap-4">
+    <div id="about" className="about lg:px-24 lg:h-screen w-full bg-[#161716]">
+      <div className="about_container w-full h-full px-4 py-24 lg:px-20 ">
+        <div className="header flex items-center gap-4 pr-4">
           <h1
             id="about_title"
-            className="text-4xl font-black w-[300px] md:text-5xl overflow-hidden"
+            className="text-4xl font-black w-[230px] md:text-5xl overflow-hidden text-center"
           >
             About.
           </h1>
@@ -186,7 +183,7 @@ const About = () => {
               <div className="w-fit overflow-hidden">
                 <h1 className="skill_title flex gap-2 items-center text-xl font-bold">
                   <SiHyperskill size={22} className="text-green-300" /> Skill
-                  Respository
+                  Repository
                 </h1>
               </div>
               <div className="skill_items flex flex-wrap gap-2 pt-4 overflow-hidden">
