@@ -62,9 +62,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="contact px-4 lg:px-24 min-h-full w-full bg-[#161716]"
+      className="contact px-4 lg:px-24 w-full min-h-full bg-[#161716]"
     >
-      <div className="contact_container w-full h-full px-6 pt-20 lg:pt-24 lg:px-20 flex flex-col items-center gap-4">
+      <div className="contact_container w-full h-full px-6 pt-20 lg:pt-24 lg:px-20 flex flex-col items-center gap-4 bg-inherit">
         <div className="header_content w-full text-center flex flex-col gap-1 items-center justify-center">
           <h1 className="text-6xl font-black pt-2 overflow-hidden">
             <span id="contact_item" className="contact_title">
@@ -86,7 +86,7 @@ const Contact = () => {
         </div>
 
         <div className="main_content w-full gap-6 flex flex-col lg:flex-row mt-12">
-          <div className="main_left w-full lg:w-[50%]">
+          <div className="main_left h-fit w-full lg:w-[50%]">
             <div className="left_details overflow-hidden w-fit ">
               <p className="left_detail_items text-4xl font-semibold">
                 Wanna get to know more? Hit me up!
@@ -233,7 +233,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="footer form_data_items mt-4 w-full flex items-center justify-center">
+        <div className="footer form_data_items w-full flex items-center justify-center">
           <p className="py-1 ">Made with ❣️ by Adarsh.</p>
         </div>
       </div>
