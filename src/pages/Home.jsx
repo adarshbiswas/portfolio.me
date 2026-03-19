@@ -60,14 +60,13 @@ const Home = () => {
             <p
               id="intro_para"
               ref={paraRef}
-              className="para_elem text-2xl relative font-['Gilroy'] md:text-[2.3rem] leading-none mt-3 md:mt-5 md:text-center "
+              className="para_elem text-2xl relative font-['Gilroy'] md:text-[2.3rem] leading-none pb-2 mt-4 md:mt-6 md:pb-2 md:text-center "
             >
               "A{" "}
               <span className="span_text font-extrabold font-['Gilroy'] text-[#D6C09C]">
-                Web Developer
+                full-stack Developer
               </span>{" "}
-              who loves turning ideas into interactive, stylish, and
-              user-friendly websites."
+              who loves crafting scalable, high-performance applications.
             </p>
           </div>
         </div>

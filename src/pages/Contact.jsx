@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { SlSocialGithub } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
+import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -59,6 +60,30 @@ const Contact = () => {
     });
   });
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          form.current.reset(); // clear form
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send message.");
+        },
+      );
+  };
+
   return (
     <div
       id="contact"
@@ -97,7 +122,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="social_container_icons hidden pt-4 md:flex gap-4 overflow-hidden ">
+            <div className="social_container_icons hidden pt-4 md:flex gap-4 overflow-hidden p-4">
               <a
                 className="social_icons_left"
                 href="https://github.com/adarshbiswas"
@@ -150,51 +175,51 @@ const Contact = () => {
             </div>
           </div>
           <div className="main_right mt-6 lg:mt-0 w-full lg:w-[50%]">
-            <form className="flex flex-col gap-4 w-full pt-2" action="">
-              <div className="  overflow-hidden">
-                <div className="form_data_items flex flex-col">
-                  <label className="text-lg text-white" htmlFor="Name">
-                    Full Name
-                  </label>
-                  <input
-                    className="px-3 py-2 w-full rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
-                    type="text"
-                    placeholder="John Doe"
-                  />
-                </div>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-4 w-full pt-2"
+            >
+              <div className="form_data_items flex flex-col">
+                <label className="text-lg text-white">Full Name</label>
+                <input
+                  className="px-3 py-2 w-full rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
+                  type="text"
+                  name="user_name" // ✅ IMPORTANT
+                  placeholder="John Doe"
+                  required
+                />
               </div>
-              <div className="  overflow-hidden">
-                <div className="form_data_items flex flex-col">
-                  <label className="text-lg text-white" htmlFor="Email ID">
-                    Email ID
-                  </label>
-                  <input
-                    className="px-3 py-2 rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
-                    type="email"
-                    placeholder="abc@gmail.com"
-                  />
-                </div>
+
+              <div className="form_data_items flex flex-col">
+                <label className="text-lg text-white">Email ID</label>
+                <input
+                  className="px-3 py-2 rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
+                  type="email"
+                  name="user_email" // ✅ IMPORTANT
+                  placeholder="abc@gmail.com"
+                  required
+                />
               </div>
-              <div className="  overflow-hidden">
-                <div className="form_data_items flex flex-col">
-                  <label className="text-lg text-white" htmlFor="Message">
-                    Message
-                  </label>
-                  <textarea
-                    className="px-3 py-2 rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
-                    name="message"
-                    rows="5"
-                    placeholder="Write something here..."
-                  ></textarea>
-                </div>
+
+              <div className="form_data_items flex flex-col">
+                <label className="text-lg text-white">Message</label>
+                <textarea
+                  className="px-3 py-2 rounded-md border-none text-[#f4dcb8] outline-none text-lg bg-[#d6d6d648]"
+                  name="message" // ✅ IMPORTANT
+                  rows="5"
+                  placeholder="Write something here..."
+                  required
+                ></textarea>
               </div>
-              <div className="submit_btn w-full text-center md:text-right overflow-hidden">
-                <div className="form_data_items">
-                  <input
-                    className=" bg-[#405841] text-[#f4dcb8] mx-auto px-6 py-2 rounded-md cursor-pointer hover:scale-105 duration-150 hover:bg-[#5f9361]"
-                    type="submit"
-                  />
-                </div>
+
+              <div className="text-center md:text-right">
+                <button
+                  type="submit"
+                  className="bg-[#405841] text-[#f4dcb8] px-6 py-2 rounded-md cursor-pointer hover:scale-105 duration-150 hover:bg-[#5f9361]"
+                >
+                  Send
+                </button>
               </div>
             </form>
             <div className="social_container_icons w-full flex items-center justify-center md:hidden mt-8 gap-4 ">

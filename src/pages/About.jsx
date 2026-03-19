@@ -116,30 +116,25 @@ const About = () => {
                 id="para_text"
                 className="para_texts font-extralight text-lg w-full md:w-[90%] text-gray-300 "
               >
-                Hey! I'm Adarsh, if you haven't already gathered that by now.
-                I'm a self-taught full-stack web developer from Bhopal, India. I
-                specialize in the Full-stack web development, primarily with
-                Next & React for front-end and NodeJs for backend, but love
-                building with whatever tools are right for the job.
+                Hey! I'm Adarsh, if you haven't already gathered that by now. I'm a Software Engineer focused on building scalable, enterprise-grade full-stack applications based out of Bangalore, India.
               </p>
             </div>
             <div className="para_container overflow-hidden">
               <p className="para_texts font-extralight text-lg w-full md:w-[90%] text-gray-300 ">
-                I'm currently in my senior year of college, pursuing Bachelor's
-                In Computer Science from Technocrats Institute of Technology.
+                I specialize in developing robust backend systems using Java, Spring Boot, and PostgreSQL, while also crafting responsive and dynamic user interfaces with Angular, TypeScript, and React. I have hands-on experience working with cloud technologies like AWS, enabling me to design and deploy reliable, production-ready solutions.
               </p>
             </div>
             <div className="para_container overflow-hidden">
               <p className="para_texts font-extralight text-lg w-full md:w-[90%] text-gray-300 ">
+                Beyond enterprise systems, I’m also skilled in full-stack web development and enjoy working across the stack to bring ideas to life using the right tools and technologies. 
+
                 Outside of work, I love to play video games, play sports, read
                 my favourite books and watch Anime!
               </p>
             </div>
             <div className="para_container overflow-hidden">
               <p className="para_texts font-extralight text-lg w-full md:w-[90%] text-gray-300 ">
-                I'm passively looking for new positions where I can merge my
-                love for code with my love for developing applications. If you
-                think you've got an opening that I might like, let's connect 🔗
+               I’m passionate about clean code, system design, and solving real-world problems through technology. Always open to opportunities where I can contribute, learn, and build impactful software. 🔗
               </p>
             </div>
 
@@ -155,7 +150,7 @@ const About = () => {
                 className="link_links flex items-center gap-4"
               >
                 <a
-                  href="../assets/just for fun.pdf"
+                  href="https://drive.google.com/file/d/1XUYCzi4-I74xnMyrlp_pN_70ZGLYYHZU/view?usp=sharing"
                   target="_blank"
                   className="cursor-pointer"
                 >
@@ -188,22 +183,25 @@ const About = () => {
               </div>
               <div className="skill_items flex flex-wrap gap-2 pt-4 overflow-hidden">
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  JavaScript
+                  Spring Boot
+                </span>
+                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
+                  Java
+                </span>
+                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
+                  Angular
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
                   React
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  NextJS
+                  Microservices
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  HTML
+                  restAPI
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  CSS
-                </span>
-                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  Redux
+                  Supabase
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
                   NodeJS
@@ -212,13 +210,22 @@ const About = () => {
                   Express
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  Postgres
+                  SQL/NoSQL
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  MongoDB
+                  Docker
                 </span>
                 <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
-                  GitHub
+                  Cloud services
+                </span>
+                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
+                  shell scripting
+                </span>
+                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
+                  Linux system
+                </span>
+                <span className="skill_items_item px-4 py-1 border-[1px] rounded-full">
+                  Git
                 </span>
                 {/* <span className="skill_items_item px-4 py-1 border-2 rounded-full"></span> */}
               </div>
@@ -234,14 +241,14 @@ const About = () => {
                 <h3 className="about_elems flex items-center gap-3">
                   <IoIosArrowForward /> Full Name: Adarsh Biswas
                 </h3>
-                <h3 className="about_elems flex items-center gap-3">
+                {/* <h3 className="about_elems flex items-center gap-3">
                   <IoIosArrowForward /> DOB: 23 August 2003
+                </h3> */}
+                <h3 className="about_elems flex items-center gap-3">
+                  <IoIosArrowForward /> Location: Bangalore, India
                 </h3>
                 <h3 className="about_elems flex items-center gap-3">
-                  <IoIosArrowForward /> Location: Bhopal, India
-                </h3>
-                <h3 className="about_elems flex items-center gap-3">
-                  <IoIosArrowForward /> Experience: 2 years
+                  <IoIosArrowForward /> Experience: 1-2 years
                 </h3>
                 <h3 className="about_elems flex items-start gap-3">
                   <IoIosArrowForward size={30} /> Education: Technocrats
